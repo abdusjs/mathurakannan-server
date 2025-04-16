@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: mathurakannan-server
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://abduss:abduss321@cluster0.w5hje.mongodb.net/mathurakannan
+      - key: PORT
+        value: 5000
+      - key: STRIPE_SECRET_KEY
+        value: sk_test_51QDMSmFzhVf9EW4rD9bOE9YcJJ85wXlDO7e2pcNtxsYj45eWMGI1GiPpgSg3X2W0b2ouIZTJm9YUKS8mhxuUUl0k00QrAdzJcQ
+    branch: main
+    autoDeploy: true
+    repo: https://github.com/abdusjs/mathurakannan-server.git
