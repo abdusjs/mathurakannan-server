@@ -13,7 +13,7 @@ connectDB();
 app.use(express.json({ limit: "20mb" }));
 app.use(express.urlencoded({ extended: true, limit: "20mb" }));
 
-const allowedOrigins = ["*", "http://localhost:5173", "http://localhost:5174"];
+const allowedOrigins = ["*", "http://localhost:5173", "http://localhost:5174", "https://mathurakannan.netlify.app"];
 
 app.use(
   cors({
