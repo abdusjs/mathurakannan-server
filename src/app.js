@@ -3,6 +3,7 @@ import cors from "cors";
 import connectDB from "./db/connectDB.js";
 import dotenv from "dotenv";
 import paymentRoutes from "../src/routes/payment.routes.js";
+import contactRoutes from "../src/routes/contact.routes.js";
 
 dotenv.config();
 
@@ -33,5 +34,6 @@ app.use(
 
 // 📌 Routes
 app.use("/api/v1/payment", paymentRoutes);
+app.use("/api/v1/contact", contactRoutes);
 
 export default app;
